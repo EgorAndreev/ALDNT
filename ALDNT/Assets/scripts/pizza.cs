@@ -6,24 +6,8 @@ namespace PizzaN
     public class Pizza
     {
         public double Cost { get; set; }
-        private string _type;
-        public string Type {
-            get {
-                return _type;
-            }
-            set {
-                string[] types = new string[] { "margarita", "hawaiian", "marinara" };
-                if (types.Any(str => str == value)) {
-                    _type = value;
-
-                }
-                else {
-                    throw new Exception("You are an idiot!");
-                }
-            }
-        }
-        private float _pop;
-        public float Pop
+        private double _pop;
+        public double Pop
         {
             get
             {
