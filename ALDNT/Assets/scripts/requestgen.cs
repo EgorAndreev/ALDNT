@@ -29,7 +29,6 @@ namespace PizzaN
                 double offset = rand.Next(-10, 10);
                 Progress += (speed * ad + offset/100); //генерация рандома в мозгах покупателя
                 second = 1;
-                Debug.Log(Progress);
 
             }
             if (Progress >= 1.0)
@@ -40,7 +39,6 @@ namespace PizzaN
                     
                 }
                 Progress = 0.0;
-                Debug.Log(requestCount);
             }
         }
     }
