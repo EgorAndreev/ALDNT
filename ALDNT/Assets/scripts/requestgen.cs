@@ -9,7 +9,7 @@ namespace PizzaN
         private const double speed = 0.05;
         private double Progress = 0;
         private double second = 1;
-        private int requestCount = 0;
+        public static int requestCount = 0;
         public short MaxRequestCount = 6;
         System.Random rand = new System.Random();
         // TODO: Написать обработку очереди реквестов в отдельном скрипте
