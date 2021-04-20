@@ -1,12 +1,13 @@
 using UnityEngine;
 using System;
-using System.Linq;
 namespace PizzaN
 {
     public class Pizza
     {
+        public int pizzaCount = 3;
+        public double CookSpeed { get; set; }
         public double Cost { get; set; }
-        private double _pop;
+        private static double _pop;
         public double Pop
         {
             get
@@ -25,6 +26,5 @@ namespace PizzaN
                 }
             }
         }
-
     }
 }

@@ -7,20 +7,12 @@ namespace PizzaN
 
     public class Request
     {
-        public Pizza Margarita = new Pizza();
-        public Pizza Marinara = new Pizza();
-        public Pizza Hawaiian = new Pizza();
-        void Gen()
+        public double cost;
+        public double pizzaSpeed;
+        public Request(Pizza pizza)
         {
-            //MENU:
-            //Marinara
-            //Margarita
-            //Hawaiian
-            System.Random rand = new System.Random();
-            double MarinaraVar = rand.Next(-10, 10);
-            double MargaritaVar = rand.Next(-10, 10);
-            double HawaiianVar = rand.Next(-10, 10);
-            MargaritaVar += Margarita.Pop;
+            this.cost = pizza.Cost;
+            this.pizzaSpeed = pizza.CookSpeed;
         }
     }
 }

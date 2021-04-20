@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 1481517284}
   - component: {fileID: 1481517283}
   - component: {fileID: 1481517286}
+  - component: {fileID: 1481517287}
   m_Layer: 0
   m_Name: kitchen
   m_TagString: Untagged
@@ -237,8 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f1a6e2d2ae5264ea126e8b23b8026f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chef: 1
-  MaxPizzaCount: 6
 --- !u!212 &1481517284
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -298,7 +297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481517282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.1075, y: -3.4826, z: 0}
+  m_LocalPosition: {x: 5.22, y: -3.28, z: 0}
   m_LocalScale: {x: 5.92494, y: 3.379464, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -316,5 +315,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50ffeebfb15cf641aaed50bf36e3f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ad: 1
   MaxRequestCount: 6
+--- !u!114 &1481517287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481517282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f797c1702adaf41b401bd2083e58aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
