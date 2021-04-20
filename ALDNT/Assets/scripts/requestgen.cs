@@ -6,13 +6,16 @@ namespace PizzaN
 {
     public class requestgen : MonoBehaviour
     { 
-        private const double speed = 0.05;
+        private const double speed = 0.04;
         private double Progress = 0;
         private double second = 1;
+        private double daySecond = 1;
+        private int daySecCounter = 40;
         public static int requestCount = 0;
         public short MaxRequestCount = 6;
         System.Random rand = new System.Random();
-        // TODO: Написать обработку очереди реквестов в отдельном скрипте
+        // TODO: Вывод на экран сообщения о конце дня
+        // Добавить кнопку обслужить на кассира на кассира
         void Start()
         {
         }
@@ -41,6 +44,21 @@ namespace PizzaN
                 Progress = 0.0;
                 Debug.Log(requestCount);
             }
+
+            daySecond -= Time.deltaTime;
+
+            if (daySecond <= 0)
+            {
+                daySecCounter--;
+                daySecond = 1;
+            }
+
+            if (daySecCounter == 0)
+            {
+                Shop.balance -= Shop.expenses;
+                daySecCounter = 40;
+                Debug.Log(Shop.balance);
+            }
         }
 
         Request genRequest()
@@ -48,12 +66,10 @@ namespace PizzaN
             Hawaiian havaiian = new Hawaiian();
             Margarita margarita = new Margarita();
             Marinara marinara = new Marinara();
-            //NullPizza используется для получения pizzaCount вне зависимости от других объектов класса Pizza
-            NullPizza nullpizza = new NullPizza();
             //Меню по порядку: Гавайская, Маргарита, Маринара !!!ВНИМАНИЕ: использовать только в таком порядке
             double pizzaRandom = Math.Round(rand.NextDouble(), 2);
             if (pizzaRandom <=  havaiian.Pop) {
-                havaiian.Pop -= (nullpizza.pizzaCount - 1) / 100;
+                havaiian.Pop -= (Pizza.pizzaCount - 1) / 100;
                 margarita.Pop += 0.01;
                 marinara.Pop += 0.01;
                 Request newRequest = new Request(havaiian);
@@ -61,7 +77,7 @@ namespace PizzaN
             }
             else if (pizzaRandom > havaiian.Pop && pizzaRandom <= (havaiian.Pop + margarita.Pop)) {
                 havaiian.Pop += 0.01;
-                margarita.Pop -= (nullpizza.pizzaCount - 1) / 100;
+                margarita.Pop -= (Pizza.pizzaCount - 1) / 100;
                 marinara.Pop += 0.01;
                 Request newRequest = new Request(margarita);
                 return newRequest;
@@ -69,7 +85,7 @@ namespace PizzaN
             else {
                 havaiian.Pop += 0.01;
                 margarita.Pop += 0.01;
-                marinara.Pop -= (nullpizza.pizzaCount-1) / 100;
+                marinara.Pop -= (Pizza.pizzaCount-1) / 100;
                 Request newRequest = new Request(marinara);
                 return newRequest;
             }

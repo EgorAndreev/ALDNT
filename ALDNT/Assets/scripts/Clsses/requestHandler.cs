@@ -16,7 +16,7 @@ namespace PizzaN
 
         void Start()
         {
-
+            Debug.Log(Shop.balance);
         }
 
         void Update()
@@ -24,16 +24,25 @@ namespace PizzaN
             second -= Time.deltaTime;
             if (requestQueue.Any() && flag == false)
             {
-                tempElem = requestQueue.Peek();
+                tempElem = requestQueue.Dequeue();
                 flag = true;
                 second = 1;
             }
 
-            if (flag)
+            if (flag && second<=0)
             {
                 Progress += (speed * Shop.chef_count - tempElem.pizzaSpeed);
+                second = 1;
             }
-            //TODO: Закончить обработчик очереди и подцепить к кухне
+
+            if (Progress >= 1)
+            {
+                Progress = 0;
+                flag = false;
+                Shop.balance += tempElem.cost;
+                requestgen.requestCount -= 1;
+                //Debug.Log(Shop.balance);
+            }
         }
 
 

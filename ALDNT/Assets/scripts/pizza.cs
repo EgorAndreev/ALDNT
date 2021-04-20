@@ -4,7 +4,7 @@ namespace PizzaN
 {
     public class Pizza
     {
-        public int pizzaCount = 3;
+        public static int pizzaCount = 3;
         public double CookSpeed { get; set; }
         public double Cost { get; set; }
         private static double _pop;

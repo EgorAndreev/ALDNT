@@ -1220,7 +1220,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278643418}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1278643420
 Camera:
   m_ObjectHideFlags: 0
@@ -1901,6 +1901,7 @@ GameObject:
   - component: {fileID: 4747717709733270120}
   - component: {fileID: 4747717709733270126}
   - component: {fileID: 4747717709733270123}
+  - component: {fileID: 4747717709733270128}
   m_Layer: 0
   m_Name: kitchen
   m_TagString: Untagged
@@ -1908,6 +1909,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4747717709733270128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4747717709733270127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f797c1702adaf41b401bd2083e58aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5974128279669804424
 GameObject:
   m_ObjectHideFlags: 0

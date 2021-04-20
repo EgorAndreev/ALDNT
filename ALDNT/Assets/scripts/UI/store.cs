@@ -34,14 +34,17 @@ namespace PizzaN
         public void OnChefUp()
         {
             Shop.chef_count++;
+            Shop.expenses += 7.00;
         }
         public void OnAdsUp()
         {
-            Shop.ad_mp += 1;
+            Shop.ad_mp += 0.3;
+            Shop.expenses += 5.0;
         }
         public void OnCashUp()
         {
-            Shop.cashier_mp += 1;
+            Shop.cashier_mp += 0.3;
+            Shop.expenses += 5.0;
         }
     }
 }

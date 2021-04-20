@@ -9,7 +9,7 @@ namespace PizzaN
         {
             Cost = 5.49;
             Pop = 1 / pizzaCount;
-            CookSpeed = 0.06;
+            CookSpeed = 0.006;
         }
     }
 }

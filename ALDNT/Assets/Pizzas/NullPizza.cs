@@ -9,9 +9,6 @@ namespace PizzaN
     {
         public NullPizza()
         {
-            pizzaCount = base.pizzaCount;
-            Cost = 0;
-            Pop = 0;
             CookSpeed = 0;
         }
     }
