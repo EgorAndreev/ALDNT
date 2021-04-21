@@ -19,11 +19,17 @@ namespace PizzaN
         private bool open = false;
         private static bool popUpFlag = false;
         private double seconds = 2.0;
-        
+        System.Random rand = new System.Random();
+        public int bonus;
+        public int bonus2;
         void Start()
         {
             oldPos = new Vector2(PopUp.transform.localPosition.x, PopUp.transform.localPosition.y);
             newPos = new Vector2(PopUp.transform.localPosition.x + 1000, PopUp.transform.localPosition.y);
+            bonus = rand.Next(0, 10);
+            Shop.balance += bonus;
+            bonus2 = rand.Next(0, 10);
+            Shop.balance += bonus2;
         }
 
         // Update is called once per frame
@@ -38,7 +44,8 @@ namespace PizzaN
             
             if (popUpFlag)
             {
-                PopUpText.GetComponent<Text>().text = "Expenses: " + Shop.expenses;
+                
+                PopUpText.GetComponent<Text>().text = "Expenses: " + Shop.expenses + "\nDelivery bonus:" + bonus + "\nHall bonus:" + bonus2;
                 PopUp.transform.localPosition = newPos;
                 open = true;
             }

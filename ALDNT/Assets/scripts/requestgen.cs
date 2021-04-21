@@ -14,21 +14,23 @@ namespace PizzaN
         private double cashSecond = 1;
         public GameObject target;
         public GameObject target2;
+        public GameObject target3;
         public GameObject[] Customers = new GameObject[5];
+        public static GameObject[] CustomersSt = new GameObject[5];
         private double daySecond = 1;
         private int daySecCounter = 480;
         public static int requestCount = 0;
+        public static GameObject target3St;
         public short MaxRequestCount = 6;
         public static int selCustomer=0;
         public delegate void ExPopUp();
-        event ExPopUp ExEvent;
-        public delegate void DelCustomer();
-        public static event DelCustomer DelMe;
+        static event ExPopUp ExEvent;
         System.Random rand = new System.Random();
         void Start()
         {
             ExEvent += GeneralCount.ExEventHandler;
-            DelMe += DelMeH;
+            CustomersSt = Customers;
+            target3St = target3;
         }
 
         // Запуск каждый кадр
@@ -113,9 +115,10 @@ namespace PizzaN
                 return newRequest;
             }
         }
-        private void DelMeH()
+        public static void DelMeH()
         {
-
+            CustomersSt[selCustomer].transform.position = target3St.transform.position;
+            selCustomer++;
         }
     }
 }

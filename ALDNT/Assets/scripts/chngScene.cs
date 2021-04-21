@@ -23,7 +23,19 @@ namespace PizzaN
 
         void LoadGame()
         {
-            SceneManager.LoadScene("you lose", LoadSceneMode.Additive);
+            SceneManager.LoadScene("you lose");
+        }
+        public void LoadMain()
+        {
+            SceneManager.LoadScene("main");
+        }
+        public void LoadTwoMain()
+        {
+            SceneManager.LoadScene("main2");
+        }
+        public void LoadThreeMain()
+        {
+            SceneManager.LoadScene("main3");
         }
     }
 }
