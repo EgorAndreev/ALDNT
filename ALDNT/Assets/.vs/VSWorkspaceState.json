@@ -1,23 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Pizzas",
     "\\scripts",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     "\\scripts\\Clsses",
     "\\scripts\\UI"
   ],
-  "SelectedNode": "\\scripts\\UI\\store.cs",
-=======
-    "\\scripts\\Clsses"
-  ],
-  "SelectedNode": "\\scripts\\Clsses\\Shop.cs",
->>>>>>> Stashed changes
-=======
-    "\\scripts\\Clsses"
-  ],
-  "SelectedNode": "\\scripts\\Clsses\\Shop.cs",
->>>>>>> Stashed changes
+  "SelectedNode": "\\scripts\\Clsses\\requestHandler.cs",
   "PreviewInSolutionExplorer": false
 }
