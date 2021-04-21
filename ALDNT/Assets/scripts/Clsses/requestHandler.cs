@@ -11,7 +11,7 @@ namespace PizzaN
         private bool flag = false;
         private double Progress = 0;
         private static Request tempElem;
-
+        public static int productsCount = 0;
         public static Queue<Request> requestQueue = new Queue<Request>();
 
         void Start()
@@ -27,6 +27,7 @@ namespace PizzaN
                 tempElem = requestQueue.Dequeue();
                 flag = true;
                 second = 1;
+                productsCount = 1;
             }
 
             if (flag && second<=0)
@@ -41,6 +42,7 @@ namespace PizzaN
                 flag = false;
                 Shop.balance += tempElem.cost;
                 requestgen.requestCount -= 1;
+                productsCount = 0;
                 //Debug.Log(Shop.balance);
             }
         }

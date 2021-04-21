@@ -9,6 +9,6 @@ namespace PizzaN {
         public static int chef_count = 1;
         public static double balance = 500.0;
 
-        public static double expenses = 8.00;
+        public static double expenses = 10.00;
     }
 }

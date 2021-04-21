@@ -10,14 +10,15 @@ namespace PizzaN
         private double Progress = 0;
         private double second = 1;
         private double daySecond = 1;
-        private int daySecCounter = 40;
+        private int daySecCounter = 480;
         public static int requestCount = 0;
         public short MaxRequestCount = 6;
+        public delegate void ExPopUp();
+        event ExPopUp ExEvent;
         System.Random rand = new System.Random();
-        // TODO: Вывод на экран сообщения о конце дня
-        // Добавить кнопку обслужить на кассира на кассира
         void Start()
         {
+            ExEvent += GeneralCount.ExEventHandler;
         }
 
         // Запуск каждый кадр
@@ -30,8 +31,6 @@ namespace PizzaN
                 double offset = rand.Next(0, 10);
                 Progress += (speed * Shop.ad_mp + offset/100); //генерация рандома в мозгах покупателя
                 second = 1;
-                //Debug.Log(offset);
-                //Debug.Log(Progress);
 
             }
             if (Progress >= 1.0)
@@ -56,7 +55,8 @@ namespace PizzaN
             if (daySecCounter == 0)
             {
                 Shop.balance -= Shop.expenses;
-                daySecCounter = 40;
+                daySecCounter = 480;
+                ExEvent?.Invoke();
                 Debug.Log(Shop.balance);
             }
         }
