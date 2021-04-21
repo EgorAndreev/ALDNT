@@ -61,6 +61,10 @@ namespace PizzaN
             popUpFlag = true;
             
         }
+        public void OnShareClick()
+        {
+            Application.OpenURL("https://twitter.com/intent/tweet" + "?text=Я набрал " + Shop.balance + "$ в лучшей игре");
+        }
     }
 
 }

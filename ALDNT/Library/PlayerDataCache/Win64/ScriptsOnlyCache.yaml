@@ -1,13 +1,16 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - PizzaN.GeneralCount
     - PizzaN.pizzagen
+    - PizzaN.requestHandler
     - PizzaN.requestgen
-    - store
+    - PizzaN.store
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -51,13 +54,15 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1486}
+      Script: {instanceID: 1436}
     - Class: 114
       Script: {instanceID: 1660}
     - Class: 114
       Script: {instanceID: 2074}
     - Class: 114
       Script: {instanceID: 2446}
+    - Class: 114
+      Script: {instanceID: 2448}
     - Class: 114
       Script: {instanceID: 2592}
     - Class: 114
@@ -70,6 +75,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3082}
     - Class: 114
       Script: {instanceID: 3758}
+    - Class: 114
+      Script: {instanceID: 3768}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -89,16 +96,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 5ab533713adae59372fb3e10a585c186
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: AnimationPlayableAsset
-  - hash:
-      serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 5ab533713adae59372fb3e10a585c186
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
       Hash: 77aaaaa51f7a8d8ff333a879741e47d2
@@ -469,8 +476,14 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 237682c64c73b848103b102cb36a5158
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: PizzaN
     className: store
+  - hash:
+      serializedVersion: 2
+      Hash: 8bfbe5008c0198ac32052838f161c2ad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: PizzaN
+    className: GeneralCount
   - hash:
       serializedVersion: 2
       Hash: 87cef3c82381dc586f6772c3e27561b6
@@ -636,4 +649,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/main.unity
-  playerPath: D:/DocumentsNEW/GitHub/ALDNT/ALDNT/ALDNT/BuildDebug/ALDNT.exe
+  playerPath: C:/Users/epuni/Documents/al dante 2/ALDNT/ALDNT/BuildDebug/ALDNT.exe
