@@ -35,16 +35,19 @@ namespace PizzaN
         {
             Shop.chef_count++;
             Shop.expenses += 7.00;
+            Shop.balance -= 15.0;
         }
         public void OnAdsUp()
         {
             Shop.ad_mp += 0.3;
             Shop.expenses += 5.0;
+            Shop.balance -= 10.0;
         }
         public void OnCashUp()
         {
             Shop.cashier_mp += 0.3;
             Shop.expenses += 5.0;
+            Shop.balance -= 8.0;
         }
     }
 }

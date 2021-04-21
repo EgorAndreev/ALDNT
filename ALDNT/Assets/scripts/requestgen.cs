@@ -7,18 +7,28 @@ namespace PizzaN
     public class requestgen : MonoBehaviour
     { 
         private const double speed = 0.04;
+        private const double cashSpeed = 0.2;
         private double Progress = 0;
         private double second = 1;
+        private double cashProgress = 0;
+        private double cashSecond = 1;
+        public GameObject target;
+        public GameObject target2;
+        public GameObject[] Customers = new GameObject[5];
         private double daySecond = 1;
         private int daySecCounter = 480;
         public static int requestCount = 0;
         public short MaxRequestCount = 6;
+        public static int selCustomer=0;
         public delegate void ExPopUp();
         event ExPopUp ExEvent;
+        public delegate void DelCustomer();
+        public static event DelCustomer DelMe;
         System.Random rand = new System.Random();
         void Start()
         {
             ExEvent += GeneralCount.ExEventHandler;
+            DelMe += DelMeH;
         }
 
         // Запуск каждый кадр
@@ -35,13 +45,26 @@ namespace PizzaN
             }
             if (Progress >= 1.0)
             {
+                
                 if (requestCount < MaxRequestCount)
                 {
-                    requestCount += 1;
-                    requestHandler.requestQueue.Enqueue(genRequest());
-                }
-                Progress = 0.0;
-                Debug.Log(requestCount);
+                    if (selCustomer==5) { selCustomer = 0; }
+                    Customers[selCustomer].transform.position = target.transform.position;
+                    cashSecond -= Time.deltaTime;
+                    if (cashSecond <= 0)
+                    {
+                        cashProgress += speed * Shop.cashier_mp;
+                    }
+                    if (cashProgress >= 1.0)
+                    {
+                        Customers[selCustomer].transform.position = target2.transform.position;
+                        requestCount += 1;
+                        requestHandler.requestQueue.Enqueue(genRequest());
+                        Progress = 0;
+                        cashProgress = 0;
+                    }
+                } else { Progress = 0; }
+             //   Debug.Log(requestCount);
             }
 
             daySecond -= Time.deltaTime;
@@ -89,6 +112,10 @@ namespace PizzaN
                 Request newRequest = new Request(marinara);
                 return newRequest;
             }
+        }
+        private void DelMeH()
+        {
+
         }
     }
 }

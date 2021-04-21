@@ -5,32 +5,18 @@ namespace PizzaN
 {
     public class customer : MonoBehaviour
     {
-        public GameObject[] Customers = new GameObject[5];
-        private bool flag = false;
+
+        private static bool flag = false;
+        public GameObject target2;
+        private float progr = 0F;
         // Start is called before the first frame update
         void Start()
         {
-
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (flag)
-            {
-                CustomerGo();
-            }
-            CustomerGo();
         }
-        void CustomerGo()
-        {
-            System.Random rand = new System.Random();
-            int customerName = rand.Next(0, 5);
-            Instantiate(Customers[customerName]);
-            flag = false;
-        }
-        void CustomerAnim() {
-            flag = !flag;
-        } 
     }
 }
