@@ -39,7 +39,7 @@ namespace PizzaN
             ChefCount.GetComponent<Text>().text = " Chefs: " + Shop.chef_count.ToString();
             CashCount.GetComponent<Text>().text = " Cashier lvl: " + Shop.cashier_mp.ToString();
             AdsCount.GetComponent<Text>().text = " Ads: " + Shop.ad_mp.ToString();
-            Products.GetComponent<Text>().text = " Products: " + requestHandler.productsCount.ToString();
+            Products.GetComponent<Text>().text = " Expenses: " + Shop.expenses.ToString();
             Balance.GetComponent<Text>().text = Shop.balance + "$";
             
             if (popUpFlag)
@@ -70,7 +70,7 @@ namespace PizzaN
         }
         public void OnShareClick()
         {
-            Application.OpenURL("https://twitter.com/intent/tweet" + "?text=Я набрал " + Shop.balance + "$ в лучшей игре");
+            Application.OpenURL("https://twitter.com/intent/tweet" + "?text=Я набрал " + Shop.balance + "$ в игре AL DANTE 2");
         }
     }
 

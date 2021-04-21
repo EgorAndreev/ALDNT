@@ -18,7 +18,7 @@ namespace PizzaN
         public GameObject[] Customers = new GameObject[5];
         public static GameObject[] CustomersSt = new GameObject[5];
         private double daySecond = 1;
-        public int daySecCounter = 480;
+        public int daySecCounter = 120;
         public static int requestCount = 0;
         public static GameObject target3St;
         public short MaxRequestCount = 6;
@@ -75,12 +75,13 @@ namespace PizzaN
             {
                 daySecCounter--;
                 daySecond = 1;
+                Debug.Log(daySecCounter);
             }
 
-            if (daySecCounter == 0)
+            if (daySecCounter <= 0)
             {
                 Shop.balance -= Shop.expenses;
-                daySecCounter = 480;
+                daySecCounter = 120;
                 ExEvent?.Invoke();
                 Debug.Log(Shop.balance);
             }

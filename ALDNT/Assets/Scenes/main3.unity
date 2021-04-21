@@ -3608,7 +3608,7 @@ MonoBehaviour:
   - {fileID: 940875945}
   - {fileID: 284210718}
   - {fileID: 1781285279}
-  daySecCounter: 480
+  daySecCounter: 120
   MaxRequestCount: 6
 --- !u!1 &5974128279669804424
 GameObject:

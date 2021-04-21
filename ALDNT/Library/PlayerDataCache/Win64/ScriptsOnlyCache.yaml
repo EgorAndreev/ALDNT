@@ -57,29 +57,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1436}
     - Class: 114
-      Script: {instanceID: 1660}
+      Script: {instanceID: 1664}
     - Class: 114
-      Script: {instanceID: 2074}
+      Script: {instanceID: 2078}
     - Class: 114
-      Script: {instanceID: 2446}
+      Script: {instanceID: 2450}
     - Class: 114
-      Script: {instanceID: 2448}
+      Script: {instanceID: 2452}
     - Class: 114
-      Script: {instanceID: 2592}
+      Script: {instanceID: 2596}
     - Class: 114
-      Script: {instanceID: 2594}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2772}
     - Class: 114
-      Script: {instanceID: 2978}
+      Script: {instanceID: 2982}
     - Class: 114
-      Script: {instanceID: 3082}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3758}
+      Script: {instanceID: 3762}
     - Class: 114
-      Script: {instanceID: 3768}
+      Script: {instanceID: 3772}
     - Class: 114
-      Script: {instanceID: 5016}
+      Script: {instanceID: 5020}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -118,29 +118,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1436}
     - Class: 114
-      Script: {instanceID: 1660}
+      Script: {instanceID: 1664}
     - Class: 114
-      Script: {instanceID: 2074}
+      Script: {instanceID: 2078}
     - Class: 114
-      Script: {instanceID: 2446}
+      Script: {instanceID: 2450}
     - Class: 114
-      Script: {instanceID: 2448}
+      Script: {instanceID: 2452}
     - Class: 114
-      Script: {instanceID: 2592}
+      Script: {instanceID: 2596}
     - Class: 114
-      Script: {instanceID: 2594}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2772}
     - Class: 114
-      Script: {instanceID: 2978}
+      Script: {instanceID: 2982}
     - Class: 114
-      Script: {instanceID: 3082}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3758}
+      Script: {instanceID: 3762}
     - Class: 114
-      Script: {instanceID: 3768}
+      Script: {instanceID: 3772}
     - Class: 114
-      Script: {instanceID: 5016}
+      Script: {instanceID: 5020}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -179,29 +179,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1436}
     - Class: 114
-      Script: {instanceID: 1660}
+      Script: {instanceID: 1664}
     - Class: 114
-      Script: {instanceID: 2074}
+      Script: {instanceID: 2078}
     - Class: 114
-      Script: {instanceID: 2446}
+      Script: {instanceID: 2450}
     - Class: 114
-      Script: {instanceID: 2448}
+      Script: {instanceID: 2452}
     - Class: 114
-      Script: {instanceID: 2592}
+      Script: {instanceID: 2596}
     - Class: 114
-      Script: {instanceID: 2594}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2772}
     - Class: 114
-      Script: {instanceID: 2978}
+      Script: {instanceID: 2982}
     - Class: 114
-      Script: {instanceID: 3082}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3758}
+      Script: {instanceID: 3762}
     - Class: 114
-      Script: {instanceID: 3768}
+      Script: {instanceID: 3772}
     - Class: 114
-      Script: {instanceID: 5016}
+      Script: {instanceID: 5020}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -314,7 +314,7 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: 3dc9eb29b67ce77c8ab817457f8d6508
+      Hash: e5796e6267512b96fcac9405a612bdfa
     assemblyName: Assembly-CSharp.dll
     namespaceName: PizzaN
     className: requestgen
@@ -806,8 +806,8 @@ ScriptsOnlyBuild:
     className: chngScene
   platform: 19
   scenePathNames:
+  - Assets/Scenes/main3.unity
   - Assets/Scenes/main.unity
   - Assets/Scenes/you lose.unity
   - Assets/Scenes/main2.unity
-  - Assets/Scenes/main3.unity
-  playerPath: D:/DocumentsNEW/GitHub/ALDNT/ALDNT/ALDNT/BuildDebug/ALDNT.exe
+  playerPath: D:/Staff/EgorMain/ALDNT/ALDNT/ALDNT.exe
