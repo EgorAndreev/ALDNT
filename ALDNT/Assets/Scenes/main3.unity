@@ -3608,6 +3608,7 @@ MonoBehaviour:
   - {fileID: 940875945}
   - {fileID: 284210718}
   - {fileID: 1781285279}
+  daySecCounter: 480
   MaxRequestCount: 6
 --- !u!1 &5974128279669804424
 GameObject:
@@ -3644,8 +3645,8 @@ MonoBehaviour:
   CashCount: {fileID: 320333352}
   AdsCount: {fileID: 141967078}
   Balance: {fileID: 164243188}
-  PopUp: {fileID: 0}
-  PopUpText: {fileID: 0}
+  PopUp: {fileID: 1201762493}
+  PopUpText: {fileID: 1447132842}
   Products: {fileID: 848688891}
   bonus: 0
   bonus2: 0

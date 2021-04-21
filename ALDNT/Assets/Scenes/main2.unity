@@ -3218,8 +3218,8 @@ MonoBehaviour:
   CashCount: {fileID: 320333352}
   AdsCount: {fileID: 141967078}
   Balance: {fileID: 164243188}
-  PopUp: {fileID: 0}
-  PopUpText: {fileID: 0}
+  PopUp: {fileID: 149507916}
+  PopUpText: {fileID: 1226285153}
   Products: {fileID: 848688891}
   bonus: 0
   bonus2: 0

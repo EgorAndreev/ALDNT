@@ -18,7 +18,7 @@ namespace PizzaN
         public GameObject[] Customers = new GameObject[5];
         public static GameObject[] CustomersSt = new GameObject[5];
         private double daySecond = 1;
-        private int daySecCounter = 480;
+        public int daySecCounter = 480;
         public static int requestCount = 0;
         public static GameObject target3St;
         public short MaxRequestCount = 6;
